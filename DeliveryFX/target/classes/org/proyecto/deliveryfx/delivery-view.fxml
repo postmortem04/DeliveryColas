@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="621.0" prefWidth="777.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.proyecto.deliveryfx.controller.DeliveryViewController">
+   <children>
+      <Label fx:id="lblTituloGestion" layoutX="168.0" layoutY="14.0" prefHeight="37.0" prefWidth="298.0" text="Gestion Pedidos" underline="true">
+         <font>
+            <Font name="Copperplate Bold" size="35.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="78.0" prefHeight="394.0" prefWidth="332.0" style="-fx-background-color: #F4F4F4;">
+         <children>
+            <Label fx:id="lblTituloPedido" text="Pedido" textAlignment="CENTER">
+               <font>
+                  <Font name="Copperplate" size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="90.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblSubtitulo1" text="Nombre Cliente:">
+               <font>
+                  <Font name="Copperplate" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="textfieldNombre">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lblSubtitulo2" text="Direccion:">
+               <font>
+                  <Font name="Copperplate" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="textfieldDireccion">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lblSubtitulo3" text="Descripcion:">
+               <font>
+                  <Font name="Copperplate" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="textfieldDescripcion">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lblSubtitulo4" text="Prioridad:">
+               <font>
+                  <Font name="Copperplate" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <ChoiceBox fx:id="choiceboxPrioridad" maxWidth="1.7976931348623157E308" prefWidth="150.0" />
+            <Button fx:id="btnAgregarPedido" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnAgregarPedidoButtonClick" text="Agregar Pedido">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Copperplate" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnProcesarSiguiente" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnProcesarSigButtonClick" prefHeight="41.0" prefWidth="332.0" text="Procesar Siguiente Pedido">
+               <font>
+                  <Font name="Copperplate" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow height="0.0" radius="0.0" width="0.0" />
+         </effect>
+      </VBox>
+      <TableView fx:id="tableviewPedidos" layoutX="368.0" layoutY="78.0" prefHeight="404.0" prefWidth="401.0" style="-fx-background-color: #F4F4F4;">
+        <columns>
+          <TableColumn fx:id="tablecolumnNombre" prefWidth="91.0" text="Nombre" />
+          <TableColumn fx:id="tablecolumnDireccion" prefWidth="91.0" text="Direccion" />
+            <TableColumn fx:id="tablecolumnDescrip" prefWidth="119.0" text="Descripcion" />
+            <TableColumn fx:id="tablecolumnPrioridad" prefWidth="99.0" text="Prioridad" />
+        </columns>
+      </TableView>
+      <VBox layoutX="14.0" layoutY="506.0" prefHeight="101.0" prefWidth="589.0" style="-fx-background-color: #F4F4F4;">
+         <children>
+            <Label fx:id="lblTituloProcesado" text="Pedido Procesado:">
+               <font>
+                  <Font name="Copperplate" size="25.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="textareaPedidoProcesado" prefHeight="76.0" prefWidth="648.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
